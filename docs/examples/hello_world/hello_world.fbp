@@ -1,0 +1,9 @@
+provider ./{ns}.{name}.yml
+
+"http://rss.cnn.com/rss/edition_world.rss" -> url Rss(network/rss)
+
+Rss out -> msg Log(console/log) out -> msg SayIt(console/say)
+
+# "http://rss.cnn.com/rss/edition_world.rss" -> uri Request(network/request)
+# Request out -> msg SayIt(console/say)
+# Request out -> msg Log(console/log)

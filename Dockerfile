@@ -36,7 +36,8 @@ RUN export url="https://github.com/tianon/gosu/releases/download/1.17/gosu-"; \
 
 WORKDIR /app/asouldocs/
 COPY --from=binarybuilder /dist/asouldocs .
+COPY --from=binarybuilder /dist/docs ./docs
+COPY --from=binarybuilder /dist/custom ./custom
 
-VOLUME ["/app/asouldocs/custom"]
 EXPOSE 5555
 CMD ["/app/asouldocs/asouldocs", "web"]

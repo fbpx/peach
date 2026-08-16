@@ -1,0 +1,16 @@
+title: My Console Log Node
+ns: console
+name: log
+ports:
+  input:
+    msg:
+      type: string
+  output:
+    out:
+      type: string
+fn: |
+  output = () => {
+    console.log($.msg)
+
+    cb({ out: $.get('msg') })
+  }

@@ -1,0 +1,27 @@
+title: Rss Parser
+ns: network
+name: rss
+ports:
+  input:
+    url:
+      type: string
+  output:
+    out:
+      type: string
+
+dependencies:
+  npm:
+    rss-parser: latest
+fn: |
+  output = function () {
+    var parser = new rss_parser();
+
+    parser.parseURL($.url)
+      .then((feed) => {
+        cb({ out: $.create(feed.title) })
+
+        feed.items.forEach(item => {
+          cb({ out: $.create(item.title) })
+        });
+      })
+  }

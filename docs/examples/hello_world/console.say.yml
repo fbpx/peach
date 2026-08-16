@@ -1,0 +1,25 @@
+title: Say.js
+ns: console
+name: say
+ports:
+  input:
+    msg:
+      type: string
+  output:
+    out:
+      type: string
+    error:
+      type: Error
+dependencies:
+  npm:
+    say: 'latest'
+fn: |
+  output = () => {
+    say.speak($.msg, 'default', 1.0, (error) => {
+      if (error) {
+        cb( { error: $.create(error) } )
+      } else {
+        cb( { out: $.get('msg') })
+      }
+    })
+  }

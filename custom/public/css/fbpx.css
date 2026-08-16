@@ -1,0 +1,70 @@
+body {
+  font-family: 'Share Tech Mono', monospace;
+/*
+  font-family: 'Anonymous Pro', monospace;
+  font-family: 'PT Mono', monospace;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+*/
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: white;
+}
+
+pre {
+  border: 1px solid #1d3223;
+  padding: 1em;
+}
+
+pre code {
+  font-size: 1.3em;
+}
+
+.doc-content {
+  padding-top: 2rem;
+}
+
+.doc-content h1 {
+  margin-bottom: 2rem;
+}
+
+.doc-content a,
+.doc-content a:visited
+ {
+  color: deepskyblue;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+.doc-content a:hover {
+  text-decoration: none; 
+}
+
+.doc-content #edit_page {
+  text-decoration: none; 
+}
+
+.doc-content p {
+  line-height: 1.7em;
+}
+
+#edit_page {
+  position: absolute;
+  right: 2em;
+  top: 1em;
+}
+
+.devsite-section-nav > .list-group:hover > .list-group-item {
+  background-color: #32383e
+}
+
+.devsite-section-nav > .list-group > .list-group-item {
+ padding: 0.75rem;
+}
+
+
+/*
+font-family: 'Share Tech Mono', monospace;
+font-family: 'Anonymous Pro', monospace;
+font-family: 'PT Mono', monospace;
+*/

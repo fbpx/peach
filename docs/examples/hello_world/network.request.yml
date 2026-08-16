@@ -1,0 +1,24 @@
+title: Request
+ns: network
+name: request
+ports:
+  input:
+    uri:
+      type: string
+  output:
+    out:
+      type: any
+dependencies:
+  npm:
+    request: latest
+fn: |
+  output = () => {
+    request({
+      method: 'GET',
+      uri: $.uri
+    }, (error, response, body) => {
+      cb({
+        out: $.create(body)
+      })
+    })
+  }

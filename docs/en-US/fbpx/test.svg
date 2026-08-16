@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="139pt" height="362pt"
+ viewBox="0.00 0.00 139.00 362.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 358)">
+<title>structs</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-358 135,-358 135,4 -4,4"/>
+<text text-anchor="middle" x="65.5" y="-7.8" font-family="Times,serif" font-size="14.00">Example flow!</text>
+<!-- xRequest -->
+<g id="node1" class="node"><title>xRequest</title>
+<polygon fill="none" stroke="black" points="35.5,-212.5 35.5,-281.5 95.5,-281.5 95.5,-212.5 35.5,-212.5"/>
+<text text-anchor="middle" x="65.5" y="-266.3" font-family="Times,serif" font-size="14.00">url</text>
+<polyline fill="none" stroke="black" points="35.5,-258.5 95.5,-258.5 "/>
+<text text-anchor="middle" x="65.5" y="-243.3" font-family="Times,serif" font-size="14.00">Request</text>
+<polyline fill="none" stroke="black" points="35.5,-235.5 95.5,-235.5 "/>
+<text text-anchor="middle" x="65.5" y="-220.3" font-family="Times,serif" font-size="14.00">request</text>
+</g>
+<!-- xEndRequest -->
+<g id="node2" class="node"><title>xEndRequest</title>
+<polygon fill="none" stroke="black" points="24.5,-106.5 24.5,-175.5 106.5,-175.5 106.5,-106.5 24.5,-106.5"/>
+<text text-anchor="middle" x="65.5" y="-160.3" font-family="Times,serif" font-size="14.00">request</text>
+<polyline fill="none" stroke="black" points="24.5,-152.5 106.5,-152.5 "/>
+<text text-anchor="middle" x="65.5" y="-137.3" font-family="Times,serif" font-size="14.00">EndRequest</text>
+<polyline fill="none" stroke="black" points="24.5,-129.5 106.5,-129.5 "/>
+<text text-anchor="middle" x="65.5" y="-114.3" font-family="Times,serif" font-size="14.00">res</text>
+</g>
+<!-- xRequest&#45;&gt;xEndRequest -->
+<g id="edge1" class="edge"><title>xRequest:OUTPUT_request&#45;&gt;xEndRequest:INPUT_request</title>
+<path fill="none" stroke="black" d="M65.5,-212C65.5,-200 65.5,-194.75 65.5,-186.125"/>
+<polygon fill="black" stroke="black" points="69.0001,-186 65.5,-176 62.0001,-186 69.0001,-186"/>
+</g>
+<!-- xLog -->
+<g id="node3" class="node"><title>xLog</title>
+<polygon fill="none" stroke="black" points="38.5,-23.5 38.5,-69.5 92.5,-69.5 92.5,-23.5 38.5,-23.5"/>
+<text text-anchor="middle" x="65.5" y="-54.3" font-family="Times,serif" font-size="14.00">msg</text>
+<polyline fill="none" stroke="black" points="38.5,-46.5 92.5,-46.5 "/>
+<text text-anchor="middle" x="65.5" y="-31.3" font-family="Times,serif" font-size="14.00">Log</text>
+</g>
+<!-- xEndRequest&#45;&gt;xLog -->
+<g id="edge2" class="edge"><title>xEndRequest:OUTPUT_res&#45;&gt;xLog:INPUT_msg</title>
+<path fill="none" stroke="black" d="M65.5,-106C65.5,-94 65.5,-88.75 65.5,-80.125"/>
+<polygon fill="black" stroke="black" points="69.0001,-80 65.5,-70 62.0001,-80 69.0001,-80"/>
+</g>
+<!-- xIIP0 -->
+<g id="node4" class="node"><title>xIIP0</title>
+<text text-anchor="middle" x="65.5" y="-332.3" font-family="Times,serif" font-size="14.00">&#39;http://example.com/&#39;</text>
+</g>
+<!-- xIIP0&#45;&gt;xRequest -->
+<g id="edge3" class="edge"><title>xIIP0&#45;&gt;xRequest:INPUT_url</title>
+<path fill="none" stroke="black" d="M65.5,-317.814C65.5,-310.278 65.5,-301.101 65.5,-292.058"/>
+<polygon fill="black" stroke="black" points="69.0001,-292 65.5,-282 62.0001,-292 69.0001,-292"/>
+</g>
+</g>
+</svg>
