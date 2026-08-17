@@ -53,4 +53,4 @@ An example project structure looks like:
 └── x.json
 ```
 
-After running `compile` the project can be deployed using [fbpx deploy](https://docs.fbpx.io/docs/fbpx/deploy)
+After running `compile` the project can be deployed using [fbpx deploy](/docs/fbpx/deploy)

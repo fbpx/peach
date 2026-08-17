@@ -133,6 +133,10 @@ func inspectLinks(pathPrefix string, doc ast.Node) error {
 		if dest.Scheme == "http" || dest.Scheme == "https" {
 			// TODO: external links adds an SVG
 			return ast.WalkSkipChildren, nil
+		} else if len(dest.Path) > 0 && dest.Path[0] == '/' {
+			// Absolute site path (e.g. /docs/api/node) — already root-relative,
+			// leave it untouched. Only relative links get joined with the prefix.
+			return ast.WalkSkipChildren, nil
 		} else if dest.Scheme != "" {
 			return ast.WalkContinue, nil
 		}

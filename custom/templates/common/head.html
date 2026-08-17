@@ -1,13 +1,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#0a0e13" />
   <meta name="description" content="{{.Site.Description}}" />
 
   <link rel="shortcut icon" href="/img/favicon.png" />
 
-  <script src="https://unpkg.com/alpinejs" defer></script>
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <link rel="preload" href="/fonts/SpaceGrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/JetBrainsMono-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link href="/css/main.css?v={{.BuildCommit}}" rel="stylesheet">
 
   {{if .Extension.Plausible.Enabled}}
