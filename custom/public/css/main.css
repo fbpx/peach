@@ -801,6 +801,12 @@ img {
   overflow-y: auto;
 }
 
+/* Mobile nav backdrop: hidden by default so it never becomes a grid item
+   in .docs-layout; only shown (as a fixed overlay) inside the mobile drawer. */
+.docs-sidebar__backdrop {
+  display: none;
+}
+
 .docs-sidebar__group {
   margin-bottom: 22px;
 }
@@ -1322,7 +1328,7 @@ img {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   /* show the right rail only on wide screens */
   .docs-layout {
     grid-template-columns: var(--sidebar-w) minmax(0, 1fr) var(--rail-w);
@@ -1332,7 +1338,7 @@ img {
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .docs-layout {
     grid-template-columns: 1fr;
   }
@@ -1355,6 +1361,7 @@ img {
   }
 
   .docs-sidebar__backdrop {
+    display: block;
     position: fixed;
     inset: var(--nav-h) 0 0 0;
     background: rgba(0, 0, 0, 0.5);
